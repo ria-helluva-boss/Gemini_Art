@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A gallery of Gemini's art </title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        }
+        #gallery {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        min-height: 100vh;
+        justify-content:start;
+        align-items: center;
+        background-color: antiquewhite;
+        }
+        .imgHouse{
+            display: flex;
+            width: 80vw;
+            justify-content: space-between;
+        }
+        .image{
+        display: flex;
+        width: 25rem;
+        padding-top: 10vh;
+        }
+        #priceButton{
+            width: 9.375rem ;
+            height: 2.1875rem;
+            background-color: black;
+            color: whitesmoke;
+            border: none;
+            border-radius: 2px;
+            margin-top: 1.25rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: background-color 0.2s linear, color 0.2s linear, transform 0.1s linear;
+            
+        }
+        #priceButton:hover {
+            color: black;
+            background-color: aliceblue;
+            transform: scale(1.05);
+        }
+        #priceButton:active {
+            color: #e4cf48;
+            transform: scale(0.98);
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <div id="gallery">
+        <div class="imgHouse">
+        <img src="Gemini_Generated_Image_ssq992ssq992ssq9.jpg" alt="art1" 
+        class="image"/>
+        <img src="Gemini_Generated_Image_ssq993ssq993ssq9.jpg" alt="art2"
+        class="image"/>
+        </div>
+        <button id="priceButton" onclick="calculateTotalPrice(quantity = 2,price = 15000000)">PRICE</button>
+        <div id="result"></div>
+    </div>
+    <script src="art_place.js"></script>
+</body>
+</html>
